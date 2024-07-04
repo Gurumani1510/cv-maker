@@ -31,7 +31,7 @@ function PdfComponent() {
       skills:skills
     }
     axios.post('http://localhost:5000/create-pdf', data)
-      .then(() => axios.get('http://localhost:5000/fetch-pdf', { responseType: 'blob' }))
+      .then(() => axios.get('https://cv-maker-kappa-sage.vercel.app/', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
